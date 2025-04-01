@@ -8,8 +8,14 @@
 </head>
 <body>
     <div class="top-panel">
-        <button id="addNodeBtn" class="active">Add Node</button>
-        <button id="addBeamBtn">Add Beam</button>
+       <div class="dropdown">
+        <button class="dropdown-btn">Draw ▼</button>
+        <div class="dropdown-content">
+            <a href="#" id="addPointBtn">Add Points</a>
+            <a href="#" id="addBeamBtn">Add Beam</a>
+            <a href="#" id="addTrussBtn">Add Truss</a>
+        </div>
+    </div>
         <button id="addSupportBtn">Add Support</button>
         <button id="addForceBtn">Add Force</button>
         <button id="selectBtn">Select</button>
