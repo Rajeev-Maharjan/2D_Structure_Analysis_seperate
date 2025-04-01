@@ -32,6 +32,60 @@ body {
 
 /* ... (rest of the CSS styles) ... */
  }
+        /* Dropdown Button */
+.dropdown-btn {
+    padding: 8px 12px;
+    cursor: pointer;
+    background: #e0e0e0;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    min-width: 100px;
+}
+
+/* Dropdown button on hover & focus */
+.dropdown-btn:hover, .dropdown-btn:focus {
+    background: #d0d0d0;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Active dropdown item */
+.dropdown-content a.active {
+    background-color: #4CAF50;
+    color: white;
+}
         .top-panel button:hover {
             background: #d0d0d0;
         }
