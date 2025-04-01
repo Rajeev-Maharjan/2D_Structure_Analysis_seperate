@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Structural Analysis Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-panel">
+        <button id="addNodeBtn" class="active">Add Node</button>
+        <button id="addBeamBtn">Add Beam</button>
+        <button id="addSupportBtn">Add Support</button>
+        <button id="addForceBtn">Add Force</button>
+        <button id="selectBtn">Select</button>
+        <button id="windowSelectBtn">Window Select</button>
+        <button id="deleteBtn">Delete</button>
+        <button id="panBtn">Pan</button>
+        <button id="zoomExtentsBtn">Zoom Extents</button>
+        <button id="toggleGridBtn">Toggle Grid</button>
+    </div>
+
+    <div class="right-panel">
+        <div class="snap-options">
+            <h3>Snap Options</h3>
+            <label><input type="checkbox" id="snapGrid" checked> Grid</label>
+            <label><input type="checkbox" id="snapNode" checked> Node</label>
+            <label><input type="checkbox" id="snapEndpoint" checked> Endpoint</label>
+            <label><input type="checkbox" id="snapMidpoint" checked> Midpoint</label>
+            <label><input type="checkbox" id="snapIntersection"> Intersection</label>
+            <label><input type="checkbox" id="snapPerpendicular"> Perpendicular</label>
+            <label><input type="checkbox" id="snapNearest"> Nearest</label>
+        </div>
+    </div>
+
+    <div class="zoom-controls">
+        <button id="zoomInBtn">+</button>
+        <button id="zoomOutBtn">-</button>
+    </div>
+
+    <div class="status-bar">
+        <div id="coordinates">X: 0, Y: 0</div>
+        <div id="scale">Scale: 100%</div>
+        <div id="snap-status">Snap: On</div>
+    </div>
+
+    <div id="canvas-container">
+        <canvas id="gridCanvas" class="grid-canvas"></canvas>
+        <canvas id="drawingCanvas" class="drawing-canvas"></canvas>
+        <div id="selectionRect" class="selection-rect" style="display: none;"></div>
+        <div id="snapIndicator" class="snap-indicator" style="display: none;"></div>
+    </div>
+
+<!-- JavaScript files MUST be in this order -->
+    <script src="config.js"></script>
+    <script src="utils.js"></script>
+    <script src="drawing.js"></script>
+    <script src="events.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
